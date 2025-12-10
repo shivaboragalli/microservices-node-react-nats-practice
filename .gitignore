@@ -1,0 +1,64 @@
+#temporarily ignore github Actions
+.github/workflows/
+
+# ignore common folder 
+common
+# Node (ignore all node_modules in all nested services)
+node_modules/
+**/node_modules/
+/auth/node_modules
+/tickets/node_modules
+/orders/node_modules
+/payments/node_modules
+/client/node_modules
+/nats-test/node_modules
+/common/node_modules
+
+dist/
+**/dist/
+build/
+**/build/
+/client/.next
+npm-debug.log
+yarn-error.log
+package-lock.json
+# Environment Variables
+.env
+.env.*
+*.local
+
+# Logs
+logs/
+**/logs/
+*.log
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# IDE folders
+.vscode/
+.idea/
+
+# Docker
+docker-env
+
+# Kubernetes / Skaffold
+.skaffold/
+**/*~
+
+# NATS
+nats-data/
+nats-streaming.log
+
+# TypeScript output (each service has its own build)
+**/build/
+**/dist/
+
+# Coverage
+coverage/
+**/coverage/
+
+# Misc
+*.pid
+*.seed
